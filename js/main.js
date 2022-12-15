@@ -1,3 +1,7 @@
+var time = new Date();
+console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
+
+//document.getElementById("NavBar2").style.display="none";
 // --------------------------- USUARIOS --------------------------------
 class User{
     constructor(dpi, name, username, password, phone, admin){
@@ -231,26 +235,46 @@ class queueBlock{
 
 // --------------------------- LOGIN --------------------------------
 document.getElementById("btn_login").onclick=function(){
-    alert("aaaaaaaa")
+    console.log("Intento de Inicio de Sesión");
     let user = document.getElementById("userLogin").value;
     let password = document.getElementById("passwordLogin").value;
-    var usuarioEntrada = listaUsuarios.RecorrerMenu(usuario,contrasenia);
+    var usuarioEntrada = listUsers.findUserLogin(user,password);
+    var check = document.getElementById("checkAdm").check;
     if (usuarioEntrada != null){
-        console.log("1")
-       // if(usuarioEntrada.rol == "Administrador"){
-            //document.getElementById("Login").style.display="none";
-            //document.getElementById("Index").style.display="none";
+       if(check = true && usuarioEntrada.admin == true){
+            console.log("Intento de Inicio de Sesión Exitoso");
+            alert("Ingreso como Administrador: " + usuarioEntrada.username);
+            document.getElementById("NavBar").style.display="none";
+            document.getElementById("NavBar2").style.display="block";
+            document.getElementById("NarBar3").style.display="none";
+            document.getElementById("Index").style.display="none";
+            document.getElementById("Login").style.display="none";
+            document.getElementById("Register").style.display="none";
+            document.getElementById("Admin").style.display="block";
+            document.getElementById("User").style.display="none";
+            
+            //document.getElementById("NarBar3").style.display="none";
             //document.getElementById("Administracion").style.display="block";
-      //  }
-       // else if(usuarioEntrada.rol == "Usuario"){
+        }else{
+            alert("Ingreso de Usuario: " + usuarioEntrada.username);
+            document.getElementById("NavBar").style.display="none";
+            document.getElementById("NavBar2").style.display="none";
+            document.getElementById("NarBar3").style.display="block";
+            document.getElementById("Index").style.display="none";
+            document.getElementById("Login").style.display="none";
+            document.getElementById("Register").style.display="none";
+            document.getElementById("Admin").style.display="none";
+            document.getElementById("User").style.display="block";
             //document.getElementById("Login").style.display="none";
             //document.getElementById("Index").style.display="none";
             //document.getElementById("Administracion").style.display="none";
             //document.getElementById("PaginaUsuario").style.display="block";
-     //   }
+       }
     }else{
-        console.log("2")
+        console.log("Intento de Inicio de Sesión Fallido");
         alert("Usuario o contraseña incorrectos");
+        document.getElementById("userLogin").value="";
+        document.getElementById("passwordLogin").value="";
     }
     //listaUsuarios.graficarUsuarios();
 }
