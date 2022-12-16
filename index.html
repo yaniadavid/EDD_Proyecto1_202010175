@@ -16,43 +16,43 @@
         <a class="nav-link active" aria-current="page" href="#">Active</a>
         <a class="nav-link" href="#">Link</a>
         <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled">NAVBAR1</a>
     </nav>
 </div>
-<div id="NavBar2" style="display: block;">
+<div id="NavBar2" style="display: none;">
     <nav class="navbar navbar-light" style="background-color: #e1c5fd;">
         <a class="nav-link active" aria-current="page" href="#">Active2</a>
         <a class="nav-link" href="#">Link2</a>
         <a class="nav-link" href="#">Link2</a>
-        <a class="nav-link disabled">Disabled2</a>
+        <a class="nav-link disabled">NAVBAR2</a>
     </nav>
 </div>
-<div id="NavBar3" style="display: block;">
+<div id="NavBar3" style="display: none;">
     <nav class="navbar navbar-light" style="background-color: #e1c5fd;">
         <a class="nav-link active" aria-current="page" href="#">Active3</a>
+        <a class="nav-link" href="#">Link2</a>
         <a class="nav-link" href="#">Link3</a>
-        <a class="nav-link" href="#">Link3</a>
-        <a class="nav-link disabled">Disabled3</a>
+        <a class="nav-link disabled">NAVBAR3</a>
     </nav>
 </div>
 
-<div id="Index" style="display: block;">
+<div id="Index" style="display: none;">
 
 </div>
 
 
 <div id="Login" style="display: block;">
-    <form>
+    
         <div class="imgcontainer">
         <!--  <img src="img_avatar2.png" alt="Avatar" class="avatar">   -->    
         </div>
   
         <div class="container">
             <label for="uname"><b>Nombre de Usuario</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required id="userLogin">
+            <input type="text" placeholder="Enter Username" required id="userLogin">
   
             <label for="psw"><b>Clave</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required id="passwordLogin">
+            <input type="password" placeholder="Enter Password" required id="passwordLogin">
   
             <button type="submit" id="btn_login">Ingresar</button>
             <label>
@@ -61,47 +61,45 @@
         </div>
   
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn1">Registrarse</button>
+            <button type="button" class="cancelbtn1" id="btn_gotoregister">Registrarse</button>
         </div>
-  </form>
+  
 </div>
 
-<br><br><br><br><br><br><br>
-
-<div id="Register" style="display: block;">
-    <form style="border:1px solid #ccc">
+<div id="Register" style="display: none;">
+    <div style="border:1px solid #ccc">
         <div class="container">
           <h1>Registro</h1>
           <p>Por favor, completa todos los campos para crear tu usuario</p>
           <hr>
           <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="email" required>
+          <input type="text" id="usernameR" placeholder="Enter Username" name="email" required>
       
 
           <label for="FullName"><b>Nombre Completo</b></label>
-          <input type="text" placeholder="Enter Full Name" name="fullname" required>
+          <input type="text" id="fullnameR" placeholder="Enter Full Name" name="fullname" required>
 
           <label for="DPI"><b>DPI</b></label>
-          <input type="text" placeholder="Enter DPI" name="dpi" required>
+          <input type="text" id="dpiR" placeholder="Enter DPI" name="dpi" required>
       
           <label for="Phone"><b>Telefono</b></label>
-          <input type="text" placeholder="Enter Phone" name="phone" required>
+          <input type="text" id="phoneR" placeholder="Enter Phone" name="phone" required>
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" id="pswR" placeholder="Enter Password" name="psw" required>
       
       
           <p>By creating an account you agree to our <a style="color:dodgerblue">Terms & Privacy</a>.</p>
       
           <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="button" class="cancelbtn" id="btn_cancelRegister">Cancel</button>
+            <button type="submit" class="signupbtn" id="btn_register">Sign Up</button>
           </div>
         </div>
-      </form>
+    </div>
 </div>
 
-<div id="Admin" style="display: block;">
+<div id="Admin" style="display: none;">
     <H1>Interfaz del Administrador</H1>
     <div class="input-group">
         <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
@@ -129,10 +127,13 @@
     </div><br><br>
 </div>
 
-<div id="User" style="display: block;">
+<div id="User" style="display: none;">
     <H1>Interfaz del Usuario</H1>
 </div >
     
+
+
+
 
 
 <script src="js/main.js"></script>
