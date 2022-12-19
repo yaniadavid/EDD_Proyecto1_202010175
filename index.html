@@ -12,27 +12,35 @@
 </head>
 <body>
   <div id="NavBar1" style="display: block;">
-    <nav class="navbar navbar-light" style="background-color: #e1c5fd;">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled">NAVBAR1</a>
+    <nav class="navbar navbar-light" style="background-color: #000000;">
+        <a class="nav-link" href="#"></a>
+        <a class="nav-link" href="documentacion/ManualTecnicoP1.pdf"><button type="button" class="btn btn-outline-info">Manual Técnico</button></a>
+        <a class="nav-link" href="documentacion/ManualUsuarioP1.pdf"><button type="button" class="btn btn-outline-info">Manual de Usuario</button></a>
+        <a class="nav-link disabled" style="color:rgb(255, 255, 255);"><b>Muster Cloud</b></a>
     </nav>
 </div>
+
+
 <div id="NavBar2" style="display: none;">
-    <nav class="navbar navbar-light" style="background-color: #e1c5fd;">
-        <a class="nav-link active" aria-current="page" href="#">Active2</a>
-        <a class="nav-link" href="#">Link2</a>
-        <a class="nav-link" href="#">Link2</a>
-        <a class="nav-link disabled">NAVBAR2</a>
+    <nav class="navbar navbar-light" style="background-color: #000000;">
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger" id="btn_cerrarAdmin">Cerrar Sesión</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_usersAdmin">Usuarios</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_albumAdmin">Artistas + Canciones</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_calendarAdmin">Música programada</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_podcastAdmin">Podcast</button></a>
+        <a class="nav-link disabled" style="color:rgb(255, 255, 255);"><b>Muster Cloud</b></a>
     </nav>
 </div>
 <div id="NavBar3" style="display: none;">
-    <nav class="navbar navbar-light" style="background-color: #e1c5fd;">
-        <a class="nav-link active" aria-current="page" href="#">Active3</a>
-        <a class="nav-link" href="#">Link2</a>
-        <a class="nav-link" href="#">Link3</a>
-        <a class="nav-link disabled">NAVBAR3</a>
+    <nav class="navbar navbar-light" style="background-color: #000000;">
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-danger" id="btn_cerrarSesion">Cerrar Sesión</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_musicaUser">Música</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_playlistUser">Playlist</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_artistUser">Artistas</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_podcastUser">Podcast</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_amigosUser">Amigos</button></a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" id="btn_blockUser">Bloqueados</button></a>
+        <a class="nav-link disabled" style="color:rgb(255, 255, 255);"><b>Muster Cloud</b></a>
     </nav>
 </div>
 
@@ -100,35 +108,145 @@
 </div>
 
 <div id="Admin" style="display: none;">
-    <H1>Interfaz del Administrador</H1>
-    <div class="input-group">
-        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Usuarios</button>
-    </div><br><br>
+    <div id="cargasMasivas" style="width:70%; margin: auto;">
+        <H1>Administrador</H1>
+        <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Usuarios</button>
+            <input type="file" class="form-control" id="masivaUsuarios" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".json">
+        </div><br><br>
 
-    <div class="input-group">
-        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Artistas</button>
-    </div><br><br>
+        <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Artistas</button>
+            <input type="file" class="form-control" id="masivaArtistas" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".json">
+        </div><br><br>
 
-    <div class="input-group">
-        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Canciones</button>
-    </div><br><br>
+        <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Canciones</button>
+            <input type="file" class="form-control" id="masivaCanciones" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".json">
+        </div><br><br>
 
-    <div class="input-group">
-        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Podcast</button>
-    </div><br><br>
+        <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Podcast</button>
+            <input type="file" class="form-control" id="masivaPodcast" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".json">
+        </div><br><br>
 
-    <div class="input-group">
-        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Música Programada</button>
-    </div><br><br>
+        <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Cargar Música Programada</button>
+            <input type="file" class="form-control" id="masivaCalendario" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".json">
+        </div><br><br>
+    </div>
+
+    <div id="UsuariosAdmin" style="display: none; width: 70%; height: auto; margin: auto;">
+
+    </div>
+
+    <div id="AlbumAdmin" style="display: none; width: 70%; height: auto; margin: auto;">
+
+    </div>
+
+    <div id="CalendarioAdmin" style="display: none; width: 70%; height: auto; margin: auto;">
+
+    </div>
+
+    <div id="PodcastAdmin" style="display: none; width: 70%; height: auto; margin: auto;">
+
+    </div>
 </div>
 
 <div id="User" style="display: none;">
-    <H1>Interfaz del Usuario</H1>
+    <H1 id="welcome"></H1>
+    <div id="bienvenida" style="display: none; width: 70%; height: auto; margin: auto;">
+        <!--<div class="card" style="width: 18rem; float: center;">
+            <img src="images/music.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>-->
+    </div>
+
+    <div id="MusicUser" style="display: none; width: 70%; height: auto; margin: auto;">
+        <div id="allMusic"  >
+            
+        </div>
+
+        <br> <br> <br> <br>
+        <div id="addMusic" style="clear: both;">
+            <div style="border:1px solid #ccc">
+                <div class="container">
+                  <h1>Agregar Música</h1>
+                  <p>Por favor, completa todos los campos para agregar tu canción</p>
+                  <hr>
+                  <label for="username"><b>Nombre de la canción:</b></label>
+                  <input type="text" id="nameS" placeholder="Enter name" name="nameS" required>
+              
+        
+                  <label for="FullName"><b>Duración:</b></label>
+                  <input type="text" id="durationS" placeholder="Enter duration" name="durationS" required>
+        
+                  <label for="DPI"><b>Género</b></label>
+                  <input type="text" id="genderS" placeholder="Enter gender" name="genderS" required>
+              
+                  <label for="Phone"><b>Día</b></label>
+                  <input type="text" id="dayS" placeholder="Enter day" name="dayS">
+        
+                  <label for="psw"><b>Mes</b></label>
+                  <input type="text" id="monthS" placeholder="Enter month" name="monthS">
+              
+              
+                  <div class="clearfix">
+                    <button type="button" class="btn btn-primary" id="btn_programSong">Programar Canción</button>
+                    <button type="button" class="btn btn-warning" id="btn_addSong">Add Song</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="PlaylistUser" style="display: none; width: 70%; height: auto; margin: auto;">
+        <div id="allPlaylist">
+            
+        </div>
+    </div>
+
+    <div id="ArtistUser" style="display: none; width: 70%; height: auto; margin: auto;">
+        <div id="allArtist">
+            
+        </div>
+    </div>
+
+    <div id="PodcastUser" style="display: none; width: 70%; height: auto; margin: auto;">
+
+    </div>
+
+    <div id="FriendsUser" style="display: none; width: 70%; height: auto; margin: auto;">
+        <div id="allUsers"></div>
+        <br><br><br>
+        <H2 style="float:none;">Lista de Amigos</H2>
+        <div id="allFriends">
+
+        </div>
+        <button id="btn_eliminarFriend" type="button" class="btn btn-danger">Quitar Amigo</button>
+        
+    </div>
+
+    <div id="BlockUser" style="display: none; width: 70%; height: auto; margin: auto;">
+        
+        <div id="allEnemies">
+
+        </div>
+
+        <button id="btn_eliminarEnemy" type="button" class="btn btn-danger">Desbloquear</button>
+    </div>
 </div >
     
 
@@ -136,6 +254,9 @@
 
 
 
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>   
+<script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
