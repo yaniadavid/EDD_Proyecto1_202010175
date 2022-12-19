@@ -111,10 +111,7 @@ class listUsers{
         }
         return "";
     }
-
-    
-
-        
+ 
 
     grafica(){
         var graphUser = "digraph G { \n rankdir=\"LR\";\n";
